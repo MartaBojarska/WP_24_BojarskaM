@@ -120,11 +120,11 @@ public class Calc extends JFrame {
         mainPanel.add("Center", buttonPanel);
 
         setContentPane(mainPanel);
-        pack();
-        setVisible(true);
     }
 
     public static void main(String[] args) {
         Calc app = new Calc();
+        app.pack();
+        app.setVisible(true);
     }
 }

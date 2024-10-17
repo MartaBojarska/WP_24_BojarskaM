@@ -9,11 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.BorderLayout;
 
-public class Calc extends JFrame {
+public class CalculatorApp extends JFrame {
     
-        private int first;
-        private int second;
-        private String operation;
         private JButton button_0 = new JButton("0");
         private JButton button_1 = new JButton("1");
         private JButton button_2 = new JButton("2");
@@ -34,7 +31,7 @@ public class Calc extends JFrame {
         private JTextField textScreen;
 
         
-    public Calc(){
+    public CalculatorApp(){
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel mainPanel = new JPanel(new BorderLayout());
         textScreen = new JTextField("");
@@ -44,52 +41,52 @@ public class Calc extends JFrame {
 
         button_9.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                textScreen.setText(textScreen.getText() + 9);
+                Calculator.addDigit('9');
             }
         });
         button_8.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                textScreen.setText(textScreen.getText() + 8);
+                Calculator.addDigit('8');
             }
         });
         button_7.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                textScreen.setText(textScreen.getText() + 7);
+                Calculator.addDigit('7');
             }
         });
         button_6.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                textScreen.setText(textScreen.getText() + 6);
+                Calculator.addDigit('6');
             }
         });
         button_5.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                textScreen.setText(textScreen.getText() + 5);
+                Calculator.addDigit('5');
             }
         });
         button_4.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                textScreen.setText(textScreen.getText() + 4);
+                Calculator.addDigit('4');
             }
         });
         button_3.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                textScreen.setText(textScreen.getText() + 3);
+                Calculator.addDigit('3');
             }
         });
         button_2.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                textScreen.setText(textScreen.getText() + 2);
+                Calculator.addDigit('2');
             }
         });
         button_1.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                textScreen.setText(textScreen.getText() + 1);
+                Calculator.addDigit('1');
             }
         });
         button_0.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-                textScreen.setText(textScreen.getText() + 0);
+                Calculator.addDigit('0');
             }
         });
         button_C.addActionListener(new ActionListener(){
@@ -207,7 +204,7 @@ public class Calc extends JFrame {
     }
 
     public static void main(String[] args) {
-        Calc app = new Calc();
+        CalculatorApp app = new CalculatorApp();
         app.pack();
         app.setVisible(true);
     }
